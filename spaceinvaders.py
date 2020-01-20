@@ -15,11 +15,11 @@ IMAGE_PATH = BASE_PATH + '/images/'
 SOUND_PATH = BASE_PATH + '/sounds/'
 
 # Colors (R, G, B)
-WHITE = (255, 255, 255)
+ORANGE = (255, 255, 255)
 GREEN = (78, 255, 87)
-YELLOW = (241, 255, 0)
+white = (241, 255, 231)
 BLUE = (80, 255, 239)
-PURPLE = (203, 0, 255)
+PURPLE = (203, 7, 255)
 RED = (237, 28, 36)
 
 SCREEN = display.set_mode((800, 600))
@@ -43,7 +43,7 @@ class Ship(sprite.Sprite):
         sprite.Sprite.__init__(self)
         self.image = IMAGES['ship']
         self.rect = self.image.get_rect(topleft=(375, 540))
-        self.speed = 5
+        self.speed = 6
 
     def update(self, keys, *args):
         if keys[K_LEFT] and self.rect.x > 10:
@@ -458,6 +458,7 @@ class SpaceInvaders(object):
                 enemies.add(enemy)
 
         self.enemies = enemies
+        
 
     def make_enemies_shoot(self):
         if (time.get_ticks() - self.timer) > 700 and self.enemies:
@@ -643,3 +644,4 @@ class SpaceInvaders(object):
 if __name__ == '__main__':
     game = SpaceInvaders()
     game.main()
+    
