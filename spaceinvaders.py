@@ -16,7 +16,7 @@ SOUND_PATH = BASE_PATH + '/sounds/'
 # Colors (R, G, B)
 ORANGE = (255, 255, 255)
 GREEN = (78, 255, 87)
-white = (241, 255, 231)
+WHITE = (241, 255, 231)
 BLUE = (80, 255, 239)
 PURPLE = (203, 7, 255)
 RED = (237, 28, 36)
